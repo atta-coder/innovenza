@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-primary antialiased bg-background;
+    transition: background-color 700ms ease-in-out;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary font-bold;
+  }
+}
+
+@layer components {
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-accent to-accent-dark bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-accent to-accent-dark;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/80;
+  }
+
+  .section-padding {
+    @apply py-16;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .theme-transition {
+    @apply transition-all duration-700 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-accent hover:bg-accent-dark text-white rounded-lg transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-accent text-accent hover:bg-accent hover:text-white rounded-lg transition-colors duration-300;
+  }
+
+  .heading-primary {
+    @apply text-5xl md:text-7xl font-bold text-primary mb-4;
+  }
+
+  .heading-accent {
+    @apply text-5xl md:text-7xl font-bold text-accent mb-4;
+  }
+
+  .heading-secondary {
+    @apply text-3xl font-bold text-primary mb-3;
+  }
+
+  .text-body {
+    @apply text-gray-600 leading-relaxed;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Border */
+.gradient-border {
+  position: relative;
+  border-radius: 1rem;
+  background: linear-gradient(to right, #8B5CF6, #7C3AED);
+  padding: 1px;
+}
+
+.gradient-border > * {
+  background: white;
+  border-radius: 1rem;
+}
