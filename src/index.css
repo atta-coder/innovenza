@@ -5,11 +5,15 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
   }
 
   body {
     @apply text-primary antialiased bg-background;
-    transition: background-color 700ms ease-in-out;
+    overflow-y: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -27,7 +31,7 @@
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    @apply hover:shadow-xl hover:-translate-y-1;
   }
 
   .glass-effect {
@@ -42,16 +46,12 @@
     @apply px-4 sm:px-6 lg:px-8;
   }
 
-  .theme-transition {
-    @apply transition-all duration-700 ease-in-out;
-  }
-
   .btn-primary {
-    @apply px-6 py-3 bg-accent hover:bg-accent-dark text-white rounded-lg transition-colors duration-300;
+    @apply px-6 py-3 bg-accent hover:bg-accent-dark text-white rounded-lg;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border-2 border-accent text-accent hover:bg-accent hover:text-white rounded-lg transition-colors duration-300;
+    @apply px-6 py-3 border-2 border-accent text-accent hover:bg-accent hover:text-white rounded-lg;
   }
 
   .heading-primary {
@@ -71,20 +71,6 @@
   }
 }
 
-/* Custom Animations */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
 /* Gradient Border */
 .gradient-border {
   position: relative;
@@ -96,4 +82,22 @@
 .gradient-border > * {
   background: white;
   border-radius: 1rem;
+}
+
+/* Optimize scrolling performance */
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Prevent content jumping */
+.content-wrapper {
+  contain: content;
+  content-visibility: auto;
+}
+
+/* Optimize paint performance */
+.scroll-content {
+  will-change: transform;
+  transform: translateZ(0);
 }

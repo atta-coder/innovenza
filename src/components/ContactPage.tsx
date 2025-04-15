@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react';
-import { useThemeTransition } from '../hooks/useThemeTransition';
+import { Send, Phone, MessageSquare, Mail, MapPin, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const Contact = () => {
-  const { ref, theme, inView } = useThemeTransition('contact');
+const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,38 +31,30 @@ const Contact = () => {
   };
 
   return (
-    <section ref={ref} id="contact" className={`section-padding relative overflow-hidden ${theme.background} theme-transition`}>
-      <div className="absolute inset-0">
-        <div className="absolute top-40 -left-20 w-72 h-72 bg-violet-100 rounded-full mix-blend-multiply filter blur-xl opacity-70" />
-        <div className="absolute bottom-40 -right-20 w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70" />
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-violet-50 to-indigo-50 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Link 
+          to="/" 
+          className="inline-flex items-center text-violet-600 hover:text-violet-700 mb-8"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Home
+        </Link>
 
-      <div className="max-w-7xl mx-auto container-padding relative z-10">
-        <div className="text-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="bg-white rounded-2xl shadow-xl p-8"
           >
-            <span className="inline-block px-4 py-2 bg-violet-100 rounded-full text-violet-600 font-medium text-sm mb-4">
-              Get in Touch
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Let's Start a
-              <span className={`bg-gradient-to-r ${theme.accent} bg-clip-text text-transparent`}> Conversation</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Ready to transform your digital presence? We're here to help you achieve your goals.
-            </p>
-          </motion.div>
-        </div>
+            <div className="text-center mb-8">
+              <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
+              <p className="text-xl text-gray-600">
+                Let's discuss how we can help transform your digital presence
+              </p>
+            </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-          >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -133,7 +124,7 @@ const Contact = () => {
                 type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`w-full px-8 py-4 bg-gradient-to-r ${theme.accent} text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2`}
+                className="w-full px-8 py-4 bg-gradient-to-r from-violet-600 to-indigo-500 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <span>Send Message</span>
                 <Send size={20} />
@@ -142,10 +133,10 @@ const Contact = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
           >
             <motion.div
               whileHover={{ scale: 1.02 }}
@@ -162,34 +153,50 @@ const Contact = () => {
             </motion.div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${theme.accent} flex items-center justify-center mb-4`}>
-                <Phone className="w-6 h-6 text-white" />
-              </div>
+              <Phone className="w-8 h-8 text-violet-600 mb-3" />
               <h4 className="text-xl font-semibold mb-2">Phone</h4>
               <p className="text-gray-600">+92 348 1642395</p>
               <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9am-6pm PKT</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${theme.accent} flex items-center justify-center mb-4`}>
-                <Mail className="w-6 h-6 text-white" />
-              </div>
+              <Mail className="w-8 h-8 text-violet-600 mb-3" />
               <h4 className="text-xl font-semibold mb-2">Email</h4>
               <p className="text-gray-600">contact@example.com</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg">
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${theme.accent} flex items-center justify-center mb-4`}>
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
+              <MapPin className="w-8 h-8 text-violet-600 mb-3" />
               <h4 className="text-xl font-semibold mb-2">Location</h4>
               <p className="text-gray-600">F-7 Markaz, Islamabad, Pakistan</p>
+            </div>
+
+            <div className="bg-gradient-to-r from-violet-600 to-indigo-500 rounded-xl p-6 text-white">
+              <h4 className="text-xl font-semibold mb-4">Why Choose Us?</h4>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+                  24/7 Customer Support
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+                  Expert Team
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+                  Proven Results
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+                  Customized Solutions
+                </li>
+              </ul>
             </div>
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Contact;
+export default ContactPage;
