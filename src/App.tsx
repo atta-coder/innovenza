@@ -13,7 +13,11 @@ import WebDevelopment from './pages/WebDevelopment';
 import CaseStudies from './pages/CaseStudies';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+<<<<<<< HEAD
 import { ArrowUp } from 'lucide-react';
+=======
+import ScrollToTop from 'react-scroll-to-top';
+>>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
 
 function ScrollToTopOnMount() {
   const { pathname } = useLocation();
@@ -25,6 +29,7 @@ function ScrollToTopOnMount() {
   return null;
 }
 
+<<<<<<< HEAD
 function ScrollToTop() {
   const [isVisible, setIsVisible] = React.useState(false);
 
@@ -63,6 +68,8 @@ function ScrollToTop() {
   );
 }
 
+=======
+>>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
 function App() {
   return (
     <Router>
@@ -85,10 +92,22 @@ function App() {
           </Routes>
         </main>
         <Footer />
+<<<<<<< HEAD
         <ScrollToTop />
+=======
+        <ScrollToTop 
+          smooth 
+          component={<span className="p-2">↑</span>}
+          className="flex items-center justify-center bg-secondary hover:bg-secondary-light text-white rounded-full transition-all"
+        />
+>>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
       </div>
     </Router>
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App
+>>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
