@@ -135,11 +135,7 @@ const ContactForm = () => {
               <div className="space-y-4 text-gray-300">
                 <p>Email: innovenzadigital@gmail.com</p>
                 <p>Phone: +92 0314-6230266</p>
-<<<<<<< HEAD
                 <p>Address: Okara, Pakistan</p>
-=======
-                <p>Address: Wahab Town, Okara, Pakistan</p>
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
                 <div className="flex items-center space-x-2 pt-2">
                   <Facebook className="h-5 w-5 text-secondary" />
                   <a 
@@ -179,13 +175,7 @@ const ContactForm = () => {
             <div className="bg-black/30 backdrop-blur-sm p-8 rounded-lg border border-white/5">
               <h3 className="text-xl font-semibold text-white mb-4">Office Hours</h3>
               <div className="space-y-2 text-gray-300">
-<<<<<<< HEAD
                 <p>24/7 Available</p>
-=======
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
               </div>
             </div>
           </div>

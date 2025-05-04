@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Target, Award, Lightbulb } from 'lucide-react';
-<<<<<<< HEAD
 import CountUp from 'react-countup';
-=======
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
 
 const AboutPreview = () => {
   return (
@@ -37,52 +34,36 @@ const AboutPreview = () => {
             <div className="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Users className="h-8 w-8 text-secondary" />
             </div>
-<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-1">
               <CountUp end={1000} suffix="+" duration={2.5} />
             </h3>
-=======
-            <h3 className="text-white font-semibold mb-1">1000+</h3>
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
             <p className="text-gray-400">Happy Clients</p>
           </div>
           <div className="text-center">
             <div className="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Target className="h-8 w-8 text-secondary" />
             </div>
-<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-1">
               <CountUp end={95} suffix="%" duration={2.5} />
             </h3>
-=======
-            <h3 className="text-white font-semibold mb-1">95%</h3>
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
             <p className="text-gray-400">Success Rate</p>
           </div>
           <div className="text-center">
             <div className="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Award className="h-8 w-8 text-secondary" />
             </div>
-<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-1">
               <CountUp end={5} suffix="+" duration={2.5} />
             </h3>
-=======
-            <h3 className="text-white font-semibold mb-1">5+</h3>
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
             <p className="text-gray-400">Years Experience</p>
           </div>
           <div className="text-center">
             <div className="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Lightbulb className="h-8 w-8 text-secondary" />
             </div>
-<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-1">
               <CountUp end={200} suffix="+" duration={2.5} />
             </h3>
-=======
-            <h3 className="text-white font-semibold mb-1">200+</h3>
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
             <p className="text-gray-400">Projects Completed</p>
           </div>
         </div>

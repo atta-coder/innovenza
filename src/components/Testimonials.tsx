@@ -4,41 +4,23 @@ const testimonials = [
   {
     content: "Innovenza transformed our online presence and helped us reach a global audience. Our booking inquiries increased by 180% within just 4 months!",
     author: "Mr. Umer",
-<<<<<<< HEAD
     role: "CEO",
     company: "Tayyabatours",
     image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300"
-=======
-    role: "Owner",
-    company: "Tayyabatours",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
   },
   {
     content: "Their expertise in social media marketing and content strategy helped us establish a strong brand presence and connect with our target audience.",
     author: "Mr. Waleed",
-<<<<<<< HEAD
     role: "CEO",
     company: "Tayloft",
     image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=300"
-=======
-    role: "Owner",
-    company: "Tayloft",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
   },
   {
     content: "The team's e-commerce expertise helped us achieve a 250% increase in online sales while reducing our marketing costs significantly.",
     author: "Mr. Samee",
-<<<<<<< HEAD
     role: "CEO",
     company: "Evento Store",
     image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300"
-=======
-    role: "Owner",
-    company: "Evento Store",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
   }
 ];
 
@@ -69,11 +51,7 @@ const Testimonials = () => {
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.author}
-<<<<<<< HEAD
                   className="w-12 h-12 rounded-full object-cover mr-4"
-=======
-                  className="w-12 h-12 rounded-full mr-4 ring-2 ring-secondary/20 group-hover:ring-secondary transition-colors"
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
                 />
                 <div>
                   <h4 className="text-white font-semibold group-hover:text-secondary-light transition-colors">{testimonial.author}</h4>

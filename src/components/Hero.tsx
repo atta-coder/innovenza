@@ -2,10 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MousePointer, Users, TrendingUp, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import CountUp from 'react-countup';
-=======
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
 
 const Hero = () => {
   const containerVariants = {
@@ -89,39 +86,27 @@ const Hero = () => {
             <div className="flex items-center justify-center space-x-4 text-gray-300 bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
               <MousePointer className="h-8 w-8 text-secondary" />
               <div>
-<<<<<<< HEAD
                 <h3 className="font-semibold text-white text-2xl">
                   <CountUp end={98} suffix="%" duration={2.5} />
                 </h3>
-=======
-                <h3 className="font-semibold text-white text-2xl">98%</h3>
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
                 <p>Click-through Rate</p>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-4 text-gray-300 bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
               <Users className="h-8 w-8 text-secondary" />
               <div>
-<<<<<<< HEAD
                 <h3 className="font-semibold text-white text-2xl">
                   <CountUp end={1000} suffix="+" duration={2.5} />
                 </h3>
-=======
-                <h3 className="font-semibold text-white text-2xl">1000+</h3>
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
                 <p>Happy Clients</p>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-4 text-gray-300 bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-white/5">
               <TrendingUp className="h-8 w-8 text-secondary" />
               <div>
-<<<<<<< HEAD
                 <h3 className="font-semibold text-white text-2xl">
                   <CountUp end={300} suffix="%" duration={2.5} />
                 </h3>
-=======
-                <h3 className="font-semibold text-white text-2xl">300%</h3>
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
                 <p>Average ROI</p>
               </div>
             </div>

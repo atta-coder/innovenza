@@ -129,11 +129,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center text-gray-400">
                 <MapPin className="h-5 w-5 mr-2 text-secondary" />
-<<<<<<< HEAD
                 Okara, Pakistan
-=======
-                Wahab Town, Okara, Pakistan
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
               </li>
             </ul>
           </div>
@@ -141,11 +137,7 @@ const Footer = () => {
 
         <div className="border-t border-white/5 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-<<<<<<< HEAD
             © 2023 Innovenza. All rights reserved.
-=======
-            © {new Date().getFullYear()} Innovenza. All rights reserved.
->>>>>>> 04036188b566433aa7ada813c01c04ccd44c70ec
           </p>
         </div>
       </div>
